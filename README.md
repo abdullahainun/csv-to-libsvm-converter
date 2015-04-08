@@ -3,7 +3,11 @@ Scripts to convert csv files to libsvm format for machine learning operations
 modified from __phraug__ by __zygmuntz__
 -----------------
 
-Additions
+This is a first attempt at improving the csv2libsvm script for converting csv data files to libsvm format. The latter is commonly used for machine learning (e.g. MLLIB).
+
+A linux shell script version of the script is also in development.
+
+Additions to original csv2libsvm
 -----------------
 * returning result to STDOUT instead of output file
 ` csv2libsvm.py <input file> stdout <label index> <skip headers> <convert string classes> <output dict>`
