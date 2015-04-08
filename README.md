@@ -1,4 +1,5 @@
-Scripts to convert csv files in libsvm format for machine learning operations (modified from __phraug__ by __zygmuntz__)
+Scripts to convert csv files to libsvm format for machine learning operations 
+modified from __phraug__ by __zygmuntz__
 ======
 
 Additions
