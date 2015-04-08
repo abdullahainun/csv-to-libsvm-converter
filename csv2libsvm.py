@@ -45,14 +45,13 @@ def construct_line_string( label, line, class_dict):
 		new_item = "%s:%s" % ( i + 1, item )
 		new_line.append( new_item )
 	new_line = " ".join( new_line )
-	new_line += "\n"
 	return new_line
 
 # ---
 
 input_file = sys.argv[1]
 
-if sys.argv[2] == -1:
+if sys.argv[2] == '-1':
 	pass
 else:
 	output_file = sys.argv[2]
@@ -68,7 +67,7 @@ except IndexError:
 	skip_headers = 0	
 
 i = open( input_file )
-if sys.argv[2] == -1:
+if sys.argv[2] == '-1':
 	pass
 else:
 	o = open( output_file, 'wb' )
@@ -84,16 +83,16 @@ for line in reader:
 	else:
 		label = line.pop( label_index )
 		
-	if trigger = False:
-		new_line = contruct_line_string( label, line, class_dict )
-	else:	
+	if trigger == False:
 		new_line = construct_line( label, line )
+	else:	
+		new_line = construct_line_string( label, line, class_dict )
 	
 	if new_line == -9999:
 		trigger = True
 		class_dict = {}
 		
-	if sys.argv[2] == -1:
+	if sys.argv[2] == '-1':
 		print new_line
 	else:
-		o.write( new_line )
+		o.write( new_line + '\n' )
